@@ -1,0 +1,29 @@
+package com.ebrain.employeedao;
+
+import com.ebrain.entity.Employee;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import databaseconnection.Databaseconnection;
+import java.sql.SQLException;
+
+
+
+
+public class Employeedao {
+	public static void saveEmployee(Employee employee) throws ClassNotFoundException, SQLException {
+		Connection connection = Databaseconnection.getConnection();
+		PreparedStatement preparedStatement =  connection.prepareStatement("INSERT INTO tb_employee_InformationByNila(EmployeeID,  EmployeeName, EmployeeDepartment,EmployeeDistrict) VALUES(?,?,?,?)");
+		preparedStatement.setInt(1, employee.getEmployeeID());
+		preparedStatement.setString(2, employee.getEmployeeName());
+		preparedStatement.setString(3, employee.getEmployeeDepartment());
+		preparedStatement.setString(4, employee.getEmployeeDistrict());
+		
+		preparedStatement.executeUpdate();
+	}
+
+	
+	
+	
+
+}

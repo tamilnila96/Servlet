@@ -1,0 +1,49 @@
+package com.ebrain.entity;
+
+public class Employee {
+	
+	private Integer EmployeeID;
+	private String EmployeeName;
+	private String EmployeeDepartment;
+	private String EmployeeDistrict;
+	
+public Employee(Integer EmployeeID, String employeeName, String employeeDepartment, String employeeDistrict) {
+	}
+
+
+public Integer getEmployeeID() {
+	return EmployeeID;
+}
+
+
+public String getEmployeeName() {
+	return EmployeeName;
+}
+
+public void setEmployeeID(Integer employeeID) {
+	this.EmployeeID = employeeID;
+}
+
+
+public void setEmployeeName(String employeeName) {
+	this.EmployeeName = employeeName;
+}
+
+public String getEmployeeDepartment() {
+	return EmployeeDepartment;
+}
+
+public void setEmployeeDepartment(String employeeDepartment) {
+	this.EmployeeDepartment = employeeDepartment;
+}
+
+public String getEmployeeDistrict() {
+	return EmployeeDistrict;
+}
+
+public void setEmployeeDistrict(String employeeDistrict) {
+	EmployeeDistrict = employeeDistrict;
+}
+
+
+}

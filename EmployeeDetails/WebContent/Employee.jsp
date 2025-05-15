@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to EmployeePortal</title>
+</head>
+<body>
+<form action="<%= request.getContextPath() %>/EmployeeSubmission" method="post">
+    <!-- form fields -->
+ 
+
+<div>
+<label>EmployeeID</label>
+<input type ="text" id = "EmployeeID" name = "EmployeeID"></br>
+</div></br>
+<div>
+<label>EmployeeName</label>
+<input type ="text" id = "EmployeeName" name = "EmployeeName"></br>
+</div></br>
+<div>
+<label>EmployeeDepartment</label>
+<input type ="text" id = "EmployeeDepartment" name = "EmployeeDepartment"></br>
+</div></br>
+<div>
+<label>EmployeeDistrict</label>
+<input type ="text" id = "EmployeeDistrict" name = "EmployeeDistrict"></br>
+</div></br>
+<div>
+   <button type="submit">Submit</button>
+</div>
+
+</form>
+
+</body>
+</html>

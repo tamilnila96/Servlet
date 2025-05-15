@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Information</title>
+</head>
+<Style>
+table,th,td{
+border:1px solid black;
+border-collapse : border;
+}
+</Style>
+<body>
+<p>Welcome to employee Portal </p>
+<div>
+<a href= "/EmployeeCreation" > </a>
+<button type = "button" > Create new employee </button> <br>
+</div>
+<table>
+<tr>
+<th> Employee Name </th>
+<th> Employee Location </th>
+<th> Employee Salary </th>
+<th> Employee Department </th>
+</tr>
+<tr>
+<td colspan = "4"> No Records</td>
+</tr>
+</table>
+</body>
+</html>

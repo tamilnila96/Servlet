@@ -1,0 +1,45 @@
+package com.ebrain.employeedao;
+
+import com.ebrain.entity.Employee;
+import java.sql.ResultSet;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import databaseconnection.Databaseconnection;
+import java.sql.SQLException;
+import java.util.List; 
+import java.util.ArrayList;
+
+
+
+public class Employeedao {
+	public static void saveEmployee(Employee employee) throws ClassNotFoundException, SQLException {
+		Connection connection = Databaseconnection.getConnection();
+		PreparedStatement preparedStatement =  connection.prepareStatement("INSERT INTO tb_employee_InformationByNila(EmployeeID,  EmployeeName, EmployeeDepartment,EmployeeDistrict) VALUES(?,?,?,?)");
+		preparedStatement.setInt(1, employee.getEmployeeID());
+		preparedStatement.setString(2, employee.getEmployeeName());
+		preparedStatement.setString(3, employee.getEmployeeDepartment());
+		preparedStatement.setString(4, employee.getEmployeeDistrict());
+		
+		preparedStatement.executeUpdate();
+	}
+
+
+public static List<Employee> getAllUsers() throws ClassNotFoundException, SQLException {
+	Connection connection = Databaseconnection.getConnection();
+		String Query = "SELECT * FROM  tb_customer_tamilNila";
+		PreparedStatement  preparedStatement = connection.prepareStatement(Query);
+		ResultSet resultset = preparedStatement.executeQuery();
+		List<Employee> employee = new ArrayList<Employee>();
+		while (resultset.next()) {
+			Integer EmployeeID =  resultset.getInt(1);
+			String EmployeeName =  resultset.getString(2);
+			String  EmployeeDepartment =  resultset.getString(4);
+			String EmployeeDistrict =  resultset.getString(3);
+					
+			Employee employees = new Employee(EmployeeID,EmployeeName,EmployeeDepartment,EmployeeDistrict);
+		}
+		return employee;	
+}
+
+}

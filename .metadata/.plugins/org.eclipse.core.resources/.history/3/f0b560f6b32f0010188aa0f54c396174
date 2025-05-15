@@ -1,0 +1,5 @@
+package com.ebrain.entity;
+
+public class Employee {
+
+}
