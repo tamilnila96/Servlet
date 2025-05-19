@@ -18,7 +18,7 @@ border-collapse:border;
 <p> Welcome to Employee portal </p>
 <!-- Use a form to safely trigger servlet -->
     <form action="<%= request.getContextPath() %>/Employee" method="get">
-        <button type="submit">Create new employee</button>
+        <button type="submit">Create new employee portal</button>
     </form>
     </br>
     <form action="<%= request.getContextPath() %>/EmployeeSubmission" method="get">
